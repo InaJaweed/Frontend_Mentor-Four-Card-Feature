@@ -1,0 +1,158 @@
+/* - Red: hsl(0, 78%, 62%)
+- Cyan: hsl(180, 62%, 55%)
+- Orange: hsl(34, 97%, 64%)
+- Blue: hsl(212, 86%, 64%)
+
+### Neutral
+
+- Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%) */
+
+:root {
+	--ff: 'Poppins', sans-serif;
+	--fw-base: 400;
+	--fw-thin: 200;
+	--fw-bold: 600;
+}
+
+body {
+	background-color: hsl(0, 0%, 98%);
+	display: grid;
+	min-height: 100vh;
+	place-content: center;
+
+	font-family: var(--ff);
+	font-size: 15px;
+	font-weight: var(--fw-base);
+	color: hsl(229, 6%, 66%);
+	padding: 2rem 0 2rem 0;
+}
+
+.main-container {
+	display: grid;
+	gap: 4rem;
+	margin: 1.5rem;
+}
+
+.heading-container {
+	display: grid;
+	gap: 1rem;
+
+	text-align: center;
+}
+.heading-container > h1 {
+	font-size: 28px;
+	color: hsl(234, 12%, 34%);
+}
+.heading-title {
+	font-weight: var(--fw-thin);
+}
+.heading-container > p {
+	font-size: 17px;
+	color: hsl(229, 6%, 66%);
+}
+.card-section {
+	display: grid;
+	gap: 1.5rem;
+
+	place-content: center;
+}
+
+.card {
+	display: inline-flex;
+	flex-direction: column;
+	gap: 1rem;
+	background-color: hsl(0, 0%, 100%);
+	border-radius: 0.5rem;
+	padding: 1rem;
+	box-shadow: 5px 5px 5px lightgray;
+}
+
+.card > h2 {
+	font-weight: var(--fw-bold);
+	color: hsl(234, 12%, 34%);
+}
+
+.card > img {
+	align-self: flex-end;
+}
+
+.card > p {
+	padding-bottom: 1rem;
+}
+
+.supervisor {
+	border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+.team-builder {
+	border-top: 5px solid hsl(0, 78%, 62%);
+}
+.karma {
+	border-top: 5px solid hsl(34, 97%, 64%);
+}
+.calculator {
+	border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+@media (max-width: 375px) {
+	.heading-container > h1 {
+		font-size: 24px;
+	}
+
+	.heading-container > p {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 500px) {
+	.heading-container > h1 {
+		font-size: 36px;
+	}
+	.card-section {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 900px) {
+	.heading-container {
+		justify-content: center;
+	}
+
+	.heading-title::after {
+		content: '\a';
+		white-space: pre;
+	}
+	.line-break::after {
+		content: '\a';
+		white-space: pre;
+	}
+	.heading-container > p {
+		font-size: 16px;
+	}
+	.card-section {
+		max-width: 1400px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.card {
+		max-width: 350px;
+	}
+	.card-section .card {
+		margin-left: 25px;
+		margin-right: 0;
+	}
+
+	.karma {
+		order: 2;
+	}
+
+	.calculator {
+		order: 1;
+	}
+
+	.change {
+		transform: translateY(50%);
+	}
+}

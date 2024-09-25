@@ -1,0 +1,8 @@
+{
+	"dependencies": {
+		"firebase": "^10.13.1"
+	},
+	"scripts": {
+		"deploy-four-card": "firebase deploy --only hosting:frontend-mentor-four-card-73651"
+	}
+}

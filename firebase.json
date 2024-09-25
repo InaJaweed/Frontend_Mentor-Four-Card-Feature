@@ -1,0 +1,7 @@
+{
+	"hosting": {
+		"site": "frontend-mentor-four-card-73651",
+		"public": ".",
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+	}
+}
